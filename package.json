@@ -1,0 +1,37 @@
+{
+  "name": "ai-arena-v2",
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "bun run --hot src/server.ts",
+    "build": "bun build --target=bun --production --outdir=dist ./src/server.ts",
+    "start": "bun dist/server.js",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate",
+    "db:studio": "drizzle-kit studio",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@dimforge/rapier3d-compat": "^0.14.0",
+    "@react-three/drei": "^10.7.7",
+    "@react-three/fiber": "^9.5.0",
+    "drizzle-orm": "^0.44.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-router-dom": "^7.6.1",
+    "three": "^0.183.2",
+    "typeid-js": "^1.2.0",
+    "zod": "^3.24.4",
+    "zustand": "^5.0.11"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.2.14",
+    "@types/react": "^19.1.4",
+    "@types/react-dom": "^19.1.5",
+    "@types/three": "^0.183.1",
+    "bun-plugin-tailwind": "^0.1.2",
+    "drizzle-kit": "^0.31.0",
+    "tailwindcss": "^4.2.1",
+    "typescript": "^5.8.3"
+  }
+}
