@@ -490,7 +490,7 @@ export class MatchManager {
     const cooldowns = this.sim?.agentCooldowns ?? ([0, 0] as [number, number]);
     const buildA = this.agents.get(0)?.build ?? DEFAULT_BUILD;
     const buildB = this.agents.get(1)?.build ?? DEFAULT_BUILD;
-    const tactical = buildTacticalContext(state, cooldowns, buildA, buildB);
+    const tactical = buildTacticalContext(state, cooldowns, buildA, buildB, this._currentTurn);
 
     const opponentAgent = this.agents.get(opponentId);
     return {

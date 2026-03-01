@@ -25,6 +25,7 @@ export function buildTacticalContext(
   cooldowns: [number, number],
   buildA: RobotBuild,
   buildB: RobotBuild,
+  round: number = 0,
 ): TacticalContext {
   const r0 = state.robots[0];
   const r1 = state.robots[1];
@@ -74,7 +75,7 @@ export function buildTacticalContext(
     mySpeed: Math.round(mySpeed * 100) / 100,
     opponentSpeed: Math.round(opponentSpeed * 100) / 100,
     timeRemainingS: Math.round((MATCH_DURATION_S - state.elapsed) * 10) / 10,
-    round: 0,
+    round,
     myFacingAngle: Math.round(myFacingAngle * 100) / 100,
     opponentFacingAngle: Math.round(opponentFacingAngle * 100) / 100,
     angleToOpponent: Math.round(angleToOpponent * 100) / 100,
